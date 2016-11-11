@@ -8,6 +8,9 @@ import methodOverride from 'method-override'; // Compatibilidad put y delect con
 import mongoose from 'mongoose'; // Wrapper de mongodb
 import path from 'path'; //
 
+//importo los controladores
+import proyectosController from "./controllers/proyectosController";
+
 /**
  * Configurar base de datos
  */
@@ -29,9 +32,17 @@ app.use(logger('dev')); // Log requests to the console
 app.use(bodyParser.json()); // Parse JSON data and put it into an object which we can access
 app.use(methodOverride()); // Allow PUT/DELETE
 
+
+/**
+ * Configuro rutas
+ */
+
+app.use("/",proyectosController);
+
 /**
  * Start app
  */
 app.listen(app.get('port'), function() {
   console.log(`App listening on port ${app.get('port')}!`);
 });
+
