@@ -1,0 +1,36 @@
+{
+  "name": "WS-STK-EXPRESS",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": "4.2.1"
+  },
+  "scripts": {
+    "babel": "babel src --out-dir lib",
+    "babel:w": "babel -w src --out-dir lib",
+    "webpack": "webpack",
+    "webpack:w": "webpack --watch",
+    "postinstall": "npm run babel && npm run webpack",
+    "start": "node lib/app"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "6.7.7",
+    "babel-core": "6.7.7",
+    "babel-loader": "6.2.4",
+    "babel-preset-es2015": "6.6.0",
+    "body-parser": "1.15.0",
+    "express": "4.13.4",
+    "file-loader": "0.8.5",
+    "jade": "1.11.0",
+    "method-override": "2.3.5",
+    "mongoose": "4.4.13",
+    "morgan": "1.7.0",
+    "reflect-metadata": "0.1.2",
+    "script-loader": "0.6.1",
+    "style-loader": "0.13.0",
+    "webpack": "1.13.0"
+  }
+}
